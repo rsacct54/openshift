@@ -21,14 +21,14 @@
 
     - name: '{{ ansible_name_module }} | get_url:url | Download openshift-install binary | {{ version_openshift }}'
       unarchive:
-        src: "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/{{ version_openshift }}/openshift-install-linux.tar.gz"
+        src: "https://github.com/openshift/okd/releases/download/4.5.0-0.okd-2020-10-15-235428/openshift-install-linux-4.5.0-0.okd-2020-10-15-235428.tar.gz"
         dest: '{{ tpdk_bin }}'
         remote_src: yes
         mode: 0775
     
     - name: '{{ ansible_name_module }} | get_url:url | Download oc binary | {{ version_openshift }}'
       unarchive:
-        src: "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/{{ version_openshift }}/openshift-client-linux.tar.gz"
+        src: "https://github.com/openshift/okd/releases/download/4.5.0-0.okd-2020-10-15-235428/openshift-client-linux-4.5.0-0.okd-2020-10-15-235428.tar.gz"
         dest: '{{ tpdk_bin }}'
         remote_src: yes
         mode: 0775
