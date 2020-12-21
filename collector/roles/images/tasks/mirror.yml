@@ -20,8 +20,8 @@
         {{ tpdk_bin }}/oc adm release mirror --insecure=true \
           --to=localhost:5000/okd \
           --registry-config=/root/.docker/config.json \
-          --from=quay.io/openshift/okd:4.5.0-0.okd-2020-10-15-235428 \
-          --to-release-image=localhost:5000/4.5.0-0.okd-2020-10-15-235428
+          --from=quay.io/openshift/okd:4.6.0-0.okd-2020-11-27-200126 \
+          --to-release-image=localhost:5000/4.6.0-0.okd-2020-11-27-200126
 #     when: image_mirror_utility == "oc"
  
 # ######### Skopeo Copy Images to Registry

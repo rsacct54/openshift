@@ -16,7 +16,7 @@ git checkout ${BRANCH};
 
 # Dynamic Variables
 varUrlGit=$(git config --get remote.origin.url)
-varVerOpenshift="$(curl --silent https://github.com/openshift/okd/releases/download/4.5.0-0.okd-2020-10-15-235428/release.txt | awk '/  Version/{print $2}')"
+varVerOpenshift="$(curl --silent https://github.com/openshift/okd/releases/download/4.6.0-0.okd-2020-11-27-200126/release.txt | awk '/  Version/{print $2}')"
 varVerTerraform="$(curl -sL https://api.github.com/repos/hashicorp/terraform/releases/latest | jq -r '.tag_name' | sed 's/v//g')"
 varVerHelm="$(curl -sL https://api.github.com/repos/helm/helm/releases/latest | jq -r '.tag_name' | sed 's/v//g')"
 varVerJq="$(curl -sL https://api.github.com/repos/stedolan/jq/releases/latest | jq -r '.tag_name' | sed 's/jq-//g')"
