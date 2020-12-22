@@ -12,7 +12,7 @@ images_pause:
 images_cloudctl:
   - uri: "docker.io/containercraft"
     name: konductor
-    tag: "{{ konductor_version | default( tpdk_version ) }}"
+    tag: 4.6.1
     path: "{{ dir_platform }}/images"
   - uri: "docker.io/library"
     name: busybox
