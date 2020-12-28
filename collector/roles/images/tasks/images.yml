@@ -24,3 +24,17 @@
     creates: "{{ dir_platform }}/images/image-{{ item.name }}-{{ item.tag }}.tar"
   with_items:
     - "{{ images_pause }}"
+
+# RHCOS AWS VMDK
+- name: '{{ ansible_name_module }} | get_url:url | Place OpenShift RHCOS Image | rhcos-aws.x86_64.vmdk.gz'
+  get_url:
+    url: 'https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.6/latest/rhcos-aws.x86_64.vmdk.gz'
+    dest: '{{ dir_platform }}/coreos/rhcos'
+    mode: 0775
+    
+# Fedora CoreOS AWS VMDK
+- name: '{{ ansible_name_module }} | get_url:url | Place OpenShift Fedora CoreOS Image | fedroa-coreos-aws.x86_64.vmdk.gz'
+  get_url:
+    url: 'https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/33.20201201.3.0/x86_64/fedora-coreos-33.20201201.3.0-aws.x86_64.vmdk.xz'
+    dest: '{{ dir_platform }}/coreos/fedora'
+    mode: 0775    
