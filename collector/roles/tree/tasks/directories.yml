@@ -7,6 +7,7 @@
     recurse: yes
   with_items:
     - '{{ local_home }}/bundle'
+    - '{{ dir_platform }}/coreos'
     - '{{ dir_platform }}/terraform'
     - '{{ dir_platform }}/ansible'
     - '{{ dir_platform }}/mirror'
