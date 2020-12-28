@@ -33,9 +33,8 @@
         remote_src: yes
         mode: 0775
 
-    - name: '{{ ansible_name_module }} | get_url:url | Download terraform binary | {{ version_openshift }}'
-      unarchive:
-        src: "https://releases.hashicorp.com/terraform/0.14.3/terraform_0.14.3_linux_amd64.zip"
+    - name: '{{ ansible_name_module }} | get_url:url | Copy terraform binary from container | {{ version_openshift }}'
+      copy:
+        src: /bin/terraform
         dest: '{{ tpdk_bin }}'
-        remote_src: yes
         mode: 0775
