@@ -29,3 +29,4 @@
     - { mode: '0775', src: '{{ dir_koffer }}/collector/templates/bin/konductor.sh.j2', dest: '/tmp/konductor.sh' }
     - { mode: '0775', src: '{{ dir_koffer }}/collector/templates/pod/cloudctl.yml.j2', dest: '/tmp/cloudctl.yml' }
     - { mode: '0775', src: '{{ dir_koffer }}/collector/templates/bin/answer.sh.j2', dest: '/tmp/answer.sh' }
+    - { mode: '0775', src: '{{ dir_koffer }}/collector/templates/bin/create_amis.sh.j2', dest: '/tmp/create_amis.sh' }
