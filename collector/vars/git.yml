@@ -7,9 +7,9 @@ url_git_openshift: 'https://github.com/rsacct54/openshift.git'
 dir_git_openshift: "{{ dir_iac }}/openshift"
 
 # Terraform Git Repos
-url_git_shaman: 'https://github.com/CodeSparta/shaman'
+url_git_shaman: 'https://github.com/rsacct54/shaman'
 dir_git_shaman: "{{ dir_terraform }}/shaman"
-url_git_shaman_vpc: 'https://github.com/CodeSparta/devkit-vpc'
+url_git_shaman_vpc: 'https://github.com/rsacct54/devkit-vpc'
 dir_git_shaman_vpc: "{{ dir_terraform }}/devkit-vpc"
 
 # Git Clone Items
