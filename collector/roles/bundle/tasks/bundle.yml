@@ -53,7 +53,7 @@
 
 - name: '{{ ansible_name_module }} | command:tar.cvf | Build unified bundle with auxilary unpack+launch utilities'
   command:
-    "tar -cvf {{ dir_bundle }}/koffer-bundle.openshift-{{ version_openshift  }}.tar -C /tmp ArtifactsBundle.tar.xz.sha256 ArtifactsBundle.tar.xz cloudctl.yml konductor.sh answer.sh"
+    "tar -cvf {{ dir_bundle }}/koffer-bundle.openshift-{{ version_openshift  }}.tar -C /tmp ArtifactsBundle.tar.xz.sha256 ArtifactsBundle.tar.xz cloudctl.yml konductor.sh answer.sh create_amis.sh"
   args:
     creates: "{{ dir_bundle }}/koffer-bundle.openshift-{{ tpdk_version }}.tar"
     warn: false
